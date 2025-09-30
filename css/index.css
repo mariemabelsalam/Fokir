@@ -1,0 +1,292 @@
+:root {
+  --main-color: #ff305b;
+  --main-transition: all 1s;
+  --dark-color: rgb(85, 85, 85);
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 4.375rem;
+  color: var(--main-color);
+}
+h1,
+h2,
+h3 {
+  font-family: "Source Sans 3", sans-serif;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(51, 51, 51);
+}
+header h2 {
+  color: white;
+}
+h3 {
+  color: rgb(51, 51, 51);
+}
+p {
+  color: var(--dark-color);
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../images/header.jpeg);
+  background-position: center center;
+  background-size: cover;
+}
+header .content h2 {
+  font-weight: 300;
+}
+header nav .navbar-brand {
+  color: var(--main-color);
+}
+
+header nav .navbar-brand:hover {
+  color: var(--main-color);
+}
+.navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+header nav .collapse .navbar-nav .nav-item a {
+  transition: var(--main-transition);
+}
+header nav .collapse .navbar-nav .nav-item a:hover {
+  color: var(--main-color);
+}
+
+main .about .image {
+  border: 8px solid var(--dark-color);
+  position: relative;
+}
+
+main .about .image img {
+  transform: translate(20px, 20px);
+  cursor: pointer;
+}
+
+main .about .image .layer {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translate(20px, 20px);
+  position: absolute;
+  top: 103%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: var(--main-transition);
+}
+
+main .about .image .special:hover .layer {
+  top: 0;
+}
+main .about .image .layer i,
+footer i {
+  transition: var(--main-transition);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+main .about .image .layer i:hover,
+footer i:hover {
+  color: var(--main-color);
+}
+main .about .content h2 {
+  font-weight: 600;
+  font-size: 2.125rem;
+}
+
+main .about .content h2 span,
+footer span {
+  color: var(--main-color);
+}
+main .about .content .border-dotted {
+  border-bottom: 1px dotted;
+}
+main .about .content span {
+  color: var(--dark-color);
+}
+footer button,
+main .about button {
+  --bs-btn-bg: var(--main-color);
+  transition: var(--main-transition);
+}
+footer button:hover,
+main .about button :hover {
+  background-color: #ec2403;
+}
+main .services h3 {
+  font-weight: 600;
+}
+main .services .content {
+  transition: var(--main-transition);
+}
+main .services .content i {
+  transition: var(--main-transition);
+  font-size: 36px;
+}
+main .services .content i,
+main .part i {
+  color: var(--main-color);
+}
+main .services .content:hover {
+  background-color: white;
+  border-radius: 8px;
+}
+main .services .content:hover i {
+  transform: scale(1.1);
+}
+h2 {
+  position: relative;
+}
+.underline::before {
+  content: " ";
+  background-color: var(--main-color);
+  width: 18%;
+  height: 2px;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.underline::after {
+  content: " ";
+  width: 10%;
+  height: 10px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  position: absolute;
+  bottom: -23%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .portfolio .content .layer i {
+  color: var(--main-color);
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+}
+main .portfolio .content .layer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+main .portfolio .content .layer:hover {
+  opacity: 1;
+}
+main .portfolio .special {
+  --bs-nav-pills-link-active-color: var(--main-color);
+  --bs-nav-pills-link-active-bg: transparent;
+  --bs-nav-link-color: rgb(51, 51, 51);
+  --bs-nav-link-hover-color: rgb(51, 51, 51);
+}
+main .testimonial .content {
+  background: linear-gradient(
+    135deg,
+    var(--main-color) 0 20%,
+    #f1f1f1 20% 100%
+  );
+  width: 65%;
+}
+main .testimonial .content img {
+  width: 112px;
+  height: 112px;
+  transform: translate(-20%, 10%);
+}
+main .blog h3 {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+main .blog .card .card-body a {
+  transition: var(--main-transition);
+}
+main .blog h3:hover,
+main .blog .card .card-body a:hover {
+  color: var(--main-color) !important;
+}
+
+form {
+  max-width: 700px;
+  margin: auto;
+}
+main .contact form .special {
+  gap: 20px;
+}
+
+.form-control:focus,
+textarea:focus {
+  border-color: var(--main-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+footer {
+  background-color: #333333;
+}
+
+footer span {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+footer span:hover {
+  text-decoration: underline solid 1px var(--main-color);
+}
+
+@media (max-width: 990px) {
+  header nav .navbar-collapse {
+    background-color: #333333;
+    z-index: 1000;
+  }
+  header nav ul {
+    text-align: center;
+  }
+  main .testimonial .content {
+    width: 85%;
+  }
+  main .testimonial .content img {
+    width: 90px;
+    height: 90px;
+    transform: translate(-15%, 20%);
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+  main .testimonial .content {
+    background: linear-gradient(
+      135deg,
+      var(--main-color) 0 33%,
+      #f1f1f1 33% 100%
+    );
+    width: 100%;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  main .testimonial .content img {
+    width: 130px;
+    height: 130px;
+    display: block;
+    margin: 0 auto 1rem;
+    transform: translate(-30%, 5%);
+  }
+
+  main .testimonial .description h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  main .testimonial .description p {
+    font-size: 14px;
+  }
+
+  main .testimonial .description i,
+  main .testimonial .description span {
+    margin-bottom: 0.5rem;
+  }
+}
